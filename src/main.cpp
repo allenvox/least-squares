@@ -6,8 +6,7 @@
 
 int main() {
   // X - random number between 0 and 1
-  // Y - function of X (e.g. "2X + 1" in example.data but program doesn't know
-  // that)
+  // Y - function of X (e.g. "2X + 1 + eps" in example.data)
   std::vector<double> X, Y;
 
   // DATA GETTING
@@ -40,7 +39,7 @@ int main() {
   }
 
   // DATA PROCESSING
-  // mean/error/epsilon/dispersion/whatever of X and Y
+  // mean of X and Y
   double meanX = 0.0, meanY = 0.0;
   for (size_t i = 0; i < X.size(); i++) {
     meanX += X[i];
